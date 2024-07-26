@@ -4,17 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trupati Enterprises</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #1f1f1f;
+      padding: 1rem 0;
+    }
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    .logo-image {
+      height: 50px;
+      margin-right: 1rem;
+    }
+    .logo {
+      color: #ffffff;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    .nav-menu a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+    .toggle-nav .icon {
+      stroke: #ffffff;
+    }
+    .section-primary {
+      background-color: #282828;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .btn-group .btn {
+      background-color: #ff9800;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      margin: 0.5rem;
+      display: inline-block;
+    }
+    .section {
+      padding: 2rem 0;
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .card {
+      background-color: #333;
+      padding: 1rem;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .card .btn {
+      background-color: #ff9800;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+    .section-muted {
+      background-color: #1f1f1f;
+      padding: 2rem 0;
+    }
+    .contact-card {
+      background-color: #333;
+      padding: 1rem;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .contact-card .icon {
+      stroke: #ff9800;
+      margin-bottom: 0.5rem;
+    }
+    .footer {
+      background-color: #1f1f1f;
+      padding: 1rem 0;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
   <header class="header">
-    <div class="container flex justify-between align-center">
-      <div class="logo-container flex align-center">
+    <div class="container">
+      <div class="logo-container">
         <img src="IMG_9691.PNG" alt="Trupati Enterprises Logo" class="logo-image">
-        <a href="#" class="logo">
-          Trupati Enterprises
-        </a>
+        <a href="#" class="logo">Trupati Enterprises</a>
       </div>
       <nav class="nav-menu">
         <a href="index.html">Home</a>
@@ -34,9 +126,7 @@
     <section class="section-primary">
       <div class="container text-center">
         <h1>Welcome to Trupati Enterprises</h1>
-        <p>
-          Discover our high-quality UPVC doors and windows, designed to enhance the beauty and energy efficiency of your home.
-        </p>
+        <p>Discover our high-quality UPVC doors and windows, designed to enhance the beauty and energy efficiency of your home.</p>
         <div class="btn-group">
           <a href="completed projects" class="btn">Completed Projects</a>
           <a href="https://forms.gle/wAwD9AujPAHd39kC7" class="btn">Request Quotation</a>
@@ -45,12 +135,13 @@
     </section>
 
     <section class="section">
-      <div class="container grid grid-cols-2">
+      <div class="container grid">
         <div class="card">
           <h2>UPVC Doors and Windows</h2>
           <p>Upgrade your home with our high-quality UPVC doors, offering superior insulation, security, and style.</p>
           <a href="products" class="btn">Explore Our Products</a>
         </div>
+      </div>
     </section>
 
     <section class="section-muted">
@@ -88,6 +179,5 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
