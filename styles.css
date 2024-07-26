@@ -9,8 +9,8 @@ body {
 
 /* Header and Footer */
 .header, .footer {
-  background-color: #666666; /* Medium grey background */
-  color: #ffffff; /* White text */
+  background-color: #ffffff; /* Medium grey background */
+  color: #000000; /* White text */
   padding: 1rem 0;
   text-align: center;
 }
