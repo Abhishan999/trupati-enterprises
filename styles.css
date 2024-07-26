@@ -10,13 +10,13 @@ body {
 /* Header and Footer */
 .header, .footer {
   background-color: #ffffff; /* Medium grey background */
-  color: #000000; /* White text */
+  color: #000000; /* black text */
   padding: 1rem 0;
   text-align: center;
 }
 
 .header a, .footer a {
-  color: #ffffff; /* White text */
+  color: #000000; /* black text */
   text-decoration: none;
 }
 
