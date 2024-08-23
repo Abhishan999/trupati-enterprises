@@ -129,12 +129,11 @@
 
         .mySlides {
             display: none;
-            position: absolute;
-            width: 100%;
         }
 
         .mySlides img {
             width: 100%;
+            height: auto; /* Ensure images maintain their aspect ratio */
             display: block;
         }
 
@@ -145,11 +144,11 @@
 
         @keyframes fade {
             from {
-                opacity: 0.4
+                opacity: 0.4;
             }
 
             to {
-                opacity: 1
+                opacity: 1;
             }
         }
 
@@ -211,31 +210,41 @@
             <div class="container">
                 <div class="slideshow-container">
                     <div class="mySlides fade">
-                        <img src="indexss1.jpeg" alt="Slide 1">
+                        <img src="path/to/indexss1.jpeg" alt="Slide 1">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss1.jpeg" alt="Slide 2">
+                        <img src="path/to/image2.jpg" alt="Slide 2">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss1.jpeg" alt="Slide 3">
+                        <img src="path/to/image3.jpg" alt="Slide 3">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss1.jpeg" alt="Slide 4">
+                        <img src="path/to/image4.jpg" alt="Slide 4">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss1.jpeg" alt="Slide 5">
+                        <img src="path/to/image5.jpg" alt="Slide 5">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss1.jpeg" alt="Slide 6">
+                        <img src="path/to/image6.jpg" alt="Slide 6">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss1.jpeg" alt="Slide 7">
+                        <img src="path/to/image7.jpg" alt="Slide 7">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss1.jpeg" alt="Slide 8">
+                        <img src="path/to/image8.jpg" alt="Slide 8">
                     </div>
                 </div>
                 <br>
+                <div class="dot-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
         </section>
 
@@ -256,22 +265,21 @@
                 <div class="grid grid-cols-3">
                     <div class="contact-card">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            <path d="M3 3v18h18V3H3zm0 0L21 21"></path>
                         </svg>
-                        <p>+91 9540164858</p>
+                        <p>1234 Main St, Hometown</p>
                     </div>
                     <div class="contact-card">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            <path d="M3 3v18h18V3H3zm0 0L21 21"></path>
                         </svg>
-                        <p>trupatienterprises162@gmail.com</p>
+                        <p>+1 (123) 456-7890</p>
                     </div>
                     <div class="contact-card">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 10c0 6-8 10-8 10s-8-4-8-10a8 8 0 0 1 16 0z"></path>
+                            <path d="M3 3v18h18V3H3zm0 0L21 21"></path>
                         </svg>
-                        <p>New Delhi, India</p>
+                        <p>info@trupati.com</p>
                     </div>
                 </div>
             </div>
@@ -279,11 +287,29 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Trupati Enterprises. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Trupati Enterprises. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
 </body>
 </html>
