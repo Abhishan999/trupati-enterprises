@@ -121,16 +121,16 @@
         }
 
         .footer {
-            background-color: #000000; /* Black background for the footer */
+            background-color: #ffffff; /* White background for the footer */
             padding: 1rem 0;
             text-align: center;
-            color: #ffffff; /* White text color */
+            color: #000000; /* Black text color */
         }
 
         /* Slideshow CSS */
         .slideshow-container {
             position: relative;
-            max-width: 100%; /* Full width for responsiveness */
+            max-width: 50%; /* Adjust the width of the slideshow container */
             margin: auto;
             overflow: hidden;
         }
@@ -140,8 +140,9 @@
         }
 
         .mySlides img {
-            width: 60%; /* Further decreased size */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%; /* Adjust width of images to 100% of the container */
+            height: 200px; /* Fixed height for images */
+            object-fit: cover; /* Ensure image covers the container */
             display: block;
             margin: auto; /* Center images horizontally */
         }
@@ -155,7 +156,6 @@
             from {
                 opacity: 0.4;
             }
-
             to {
                 opacity: 1;
             }
@@ -178,26 +178,6 @@
         .dot-container {
             text-align: center;
             padding: 1rem 0;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .header .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .nav-menu {
-                margin-top: 1rem;
-            }
-
-            .btn-group {
-                flex-direction: column;
-            }
-
-            .btn-group .btn {
-                margin-bottom: 0.5rem;
-            }
         }
     </style>
 </head>
@@ -284,41 +264,31 @@
                     <p>Upgrade your home with our high-quality UPVC doors, offering superior insulation, security, and style.</p>
                     <a href="products" class="btn">Explore Our Products</a>
                 </div>
-                <div class="card">
-                    <h2>Energy Efficient Solutions</h2>
-                    <p>Improve your home's energy efficiency with our advanced UPVC solutions.</p>
-                    <a href="completed projects" class="btn">Learn More</a>
-                </div>
             </div>
         </section>
 
         <section class="section-muted">
-            <div class="container">
+            <div class="container text-center">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team to learn more about our UPVC doors and windows, or to schedule a consultation.</p>
                 <div class="grid">
                     <div class="contact-card">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 3h18v18H3V3z"></path>
-                            <path d="M6 8h12v8H6V8z"></path>
+                            <path d="M3 3v18h18V3H3zm0 0L21 21"></path>
                         </svg>
-                        <h3>Address</h3>
-                        <p>123 Main Street, City, Country</p>
+                        <p>New Delhi, India</p>
                     </div>
                     <div class="contact-card">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 3h18v18H3V3z"></path>
-                            <path d="M4 4h16v16H4V4z"></path>
-                            <path d="M6 6h12v12H6V6z"></path>
+                            <path d="M3 3v18h18V3H3zm0 0L21 21"></path>
                         </svg>
-                        <h3>Email</h3>
-                        <p>info@trupati.com</p>
+                        <p>+91 9540164858</p>
                     </div>
                     <div class="contact-card">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 11.5V21H3V11.5l9-7 9 7z"></path>
-                            <path d="M3 9l9-7 9 7"></path>
+                            <path d="M3 3v18h18V3H3zm0 0L21 21"></path>
                         </svg>
-                        <h3>Phone</h3>
-                        <p>(123) 456-7890</p>
+                        <p>trupatienterprises162@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -335,21 +305,19 @@
 
         function showSlides() {
             let i;
-            const slides = document.getElementsByClassName("mySlides");
-            const dots = document.getElementsByClassName("dot");
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
+            if (slideIndex > slides.length) { slideIndex = 1 }
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
     </script>
 </body>
