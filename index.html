@@ -140,7 +140,7 @@
         }
 
         .mySlides img {
-            width: 60%; /* Adjust width of images to 100% of the container */
+            width: 50%; /* Adjust width of images to 100% of the container */
             height: auto;
             object-fit: cover; /* Ensure image covers the container */
             display: block;
@@ -349,6 +349,12 @@
     <script>
         let slideIndex = 0;
         showSlides();
+        toggleNav();
+        function toggleNav() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+}
+
 
         function showSlides() {
             let i;
