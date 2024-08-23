@@ -132,6 +132,10 @@
             display: none;
         }
 
+        .mySlides img {
+            width: 100%;
+        }
+
         .fade {
             animation-name: fade;
             animation-duration: 1.5s;
@@ -165,15 +169,6 @@
             text-align: center;
             padding: 1rem 0;
         }
-
-        .upload-container {
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .upload-container input[type="file"] {
-            margin-bottom: 1rem;
-        }
     </style>
 </head>
 
@@ -190,8 +185,7 @@
                 <a href="#">Contact</a>
             </nav>
             <button class="toggle-nav">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -204,8 +198,7 @@
         <section class="section-primary">
             <div class="container text-center">
                 <h1>Welcome to Trupati Enterprises</h1>
-                <p>Discover our high-quality UPVC doors and windows, designed to enhance the beauty and energy
-                    efficiency of your home.</p>
+                <p>Discover our high-quality UPVC doors and windows, designed to enhance the beauty and energy efficiency of your home.</p>
                 <div class="btn-group">
                     <a href="completed projects" class="btn">Completed Projects</a>
                     <a href="https://forms.gle/wAwD9AujPAHd39kC7" class="btn">Request Quotation</a>
@@ -218,28 +211,28 @@
             <div class="container">
                 <div class="slideshow-container">
                     <div class="mySlides fade">
-                        <img src="indexss1.jpeg" style="width:100%">
+                        <img src="image1.jpg" alt="Image 1">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss2.jpeg" style="width:100%">
+                        <img src="image2.jpg" alt="Image 2">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss3.jpeg" style="width:100%">
+                        <img src="image3.jpg" alt="Image 3">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss4.jpeg" style="width:100%">
+                        <img src="image4.jpg" alt="Image 4">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss5.jpeg" style="width:100%">
+                        <img src="image5.jpg" alt="Image 5">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss6.jpeg" style="width:100%">
+                        <img src="image6.jpg" alt="Image 6">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss7.jpeg" style="width:100%">
+                        <img src="image7.jpg" alt="Image 7">
                     </div>
                     <div class="mySlides fade">
-                        <img src="indexss8.jpeg" style="width:100%">
+                        <img src="image8.jpg" alt="Image 8">
                     </div>
                 </div>
                 <br>
@@ -253,16 +246,6 @@
                     <span class="dot"></span>
                     <span class="dot"></span>
                 </div>
-
-                <!-- Image Upload Section -->
-                <div class="upload-container">
-                    <h2>Upload Images for Slideshow</h2>
-                    <form id="uploadForm">
-                        <input type="file" name="slideImage" accept="image/*" multiple>
-                        <p>Upload up to 8 images</p>
-                        <button type="button" onclick="uploadImages()">Upload Images</button>
-                    </form>
-                </div>
             </div>
         </section>
 
@@ -270,8 +253,7 @@
             <div class="container grid">
                 <div class="card">
                     <h2>UPVC Doors and Windows</h2>
-                    <p>Upgrade your home with our high-quality UPVC doors, offering superior insulation, security, and
-                        style.</p>
+                    <p>Upgrade your home with our high-quality UPVC doors, offering superior insulation, security, and style.</p>
                     <a href="products" class="btn">Explore Our Products</a>
                 </div>
             </div>
