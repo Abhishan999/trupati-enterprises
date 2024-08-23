@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trupati Enterprises
-    <img src="IMG_9691.PNG"></title>
+    <title>Trupati Enterprises</title>
     <style>
         body {
-            background-color: #f3f4f6;
+            background-color: #eaeaea; /* Light grey background for contrast with white header */
             color: #333;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -15,14 +14,19 @@
         }
 
         .header {
-            background-color: #ff9800;
+            background-color: #ffffff; /* White background for the header */
+            color: #333; /* Dark text color for contrast */
             padding: 1rem 0;
+            border-bottom: 1px solid #ddd; /* Light border for separation */
         }
 
         .header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px; /* Center content and limit width */
+            margin: auto;
+            padding: 0 1rem; /* Padding for spacing */
         }
 
         .logo-container {
@@ -36,19 +40,19 @@
         }
 
         .logo {
-            color: #ffffff;
+            color: #ff9800; /* Matching logo color with header accent */
             font-size: 1.5rem;
             text-decoration: none;
         }
 
         .nav-menu a {
-            color: #ffffff;
+            color: #ff9800; /* Matching navigation link color with logo */
             text-decoration: none;
             margin-left: 1rem;
         }
 
         .toggle-nav .icon {
-            stroke: #ffffff;
+            stroke: #ff9800; /* Matching icon color with logo and links */
         }
 
         .section-primary {
@@ -120,60 +124,59 @@
             color: #ffffff;
         }
 
-     /* Slideshow CSS */
-.slideshow-container {
-    position: relative;
-    max-width: 60%; /* Adjust the width of the slideshow container as needed */
-    margin: auto;
-    overflow: hidden;
-}
+        /* Slideshow CSS */
+        .slideshow-container {
+            position: relative;
+            max-width: 70%; /* Adjust the width of the slideshow container as needed */
+            margin: auto;
+            overflow: hidden;
+        }
 
-.mySlides {
-    display: none;
-}
+        .mySlides {
+            display: none;
+        }
 
-.mySlides img {
-    width: auto; /* Allow width to adjust automatically */
-    height: 300px; /* Set a fixed height for the images */
-    display: block;
-    margin: auto; /* Center images horizontally */
-}
+        .mySlides img {
+            width: auto; /* Allow width to adjust automatically */
+            height: 300px; /* Set a fixed height for the images */
+            display: block;
+            margin: auto; /* Center images horizontally */
+        }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
 
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
 
-    to {
-        opacity: 1;
-    }
-}
+            to {
+                opacity: 1;
+            }
+        }
 
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
 
-.active {
-    background-color: #717171;
-}
+        .active {
+            background-color: #717171;
+        }
 
-.dot-container {
-    text-align: center;
-    padding: 1rem 0;
-}
-
-</style>
+        .dot-container {
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
