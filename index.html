@@ -290,52 +290,70 @@
                         <img src="indexss8.jpeg" alt="Slide 8">
                     </div>
                 </div>
-                <br>
                 <div class="dot-container">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <div class="container grid">
-                <div class="card">
-                    <h2>UPVC Doors and Windows</h2>
-                    <p>Upgrade your home with our high-quality UPVC doors, offering superior insulation, security, and style.</p>
-                    <a href="products" class="btn">Explore Our Products</a>
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>UPVC Doors</h3>
+                        <p>Our UPVC doors are designed for durability and style, providing excellent insulation and security for your home.</p>
+                        <a href="products" class="btn">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Request Quotation</h3>
+                        <p>Choose from a variety of UPVC windows that offer energy efficiency, noise reduction, and aesthetic appeal.</p>
+                        <a href="https://forms.gle/wAwD9AujPAHd39kC7" class="btn">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Completed Projects</h3>
+                        <p>We provide custom UPVC solutions tailored to your specific requirements, ensuring a perfect fit for your space.</p>
+                        <a href="completed projects" class="btn">Learn More</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="section-muted">
-            <div class="container text-center">
-                <h2>Contact Us</h2>
-                <p>Get in touch with our team to learn more about our UPVC doors and windows, or to schedule a consultation.</p>
+            <div class="container">
+                <h2>Why Choose Us?</h2>
                 <div class="grid">
                     <div class="contact-card">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 3v18h18V3H3zm0 0L21 21"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
                         </svg>
-                        <p>New Delhi, India</p>
+                        <h3>Timely Delivery</h3>
+                        <p>We pride ourselves on delivering our products on time, every time.</p>
                     </div>
                     <div class="contact-card">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 3v18h18V3H3zm0 0L21 21"></path>
+                            <path d="M12 20l9-5-9-5-9 5 9 5z"></path>
+                            <path d="M12 12l9-5-9-5-9 5 9 5z"></path>
+                            <line x1="12" y1="12" x2="12" y2="20"></line>
                         </svg>
-                        <p>+91 9540164858</p>
+                        <h3>High-Quality Materials</h3>
+                        <p>We use only the best materials to ensure our UPVC doors and windows are of the highest quality.</p>
                     </div>
                     <div class="contact-card">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 3v18h18V3H3zm0 0L21 21"></path>
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M19 5h-7M7 12h10M9 19h6"></path>
                         </svg>
-                        <p>trupatienterprises162@gmail.com</p>
+                        <h3>Exceptional Customer Service</h3>
+                        <p>Our team is dedicated to providing excellent customer service from start to finish.</p>
                     </div>
                 </div>
             </div>
@@ -349,12 +367,6 @@
     <script>
         let slideIndex = 0;
         showSlides();
-        toggleNav();
-        function toggleNav() {
-    const navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.toggle('active');
-}
-
 
         function showSlides() {
             let i;
@@ -364,13 +376,13 @@
                 slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex > slides.length) {slideIndex = 1}
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
         }
     </script>
 </body>
